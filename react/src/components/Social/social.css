@@ -1,0 +1,76 @@
+
+html{
+    font-size:62.5%;
+}
+ul{
+    margin:0;
+    padding:0;
+}
+
+section.social{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:.9rem 2rem;
+    background: linear-gradient(to right, var( --color-blood), var(--primary-color));
+}
+
+
+section.social .social_left,
+section.social .social_right{
+    display:flex;
+}
+section.social .social_left > li .social-icon{
+    font-size: 2rem;
+}
+section.social .social_right > li .social-icon{
+    font-size: 1.6rem;
+}
+section.social .social_right > li .social-icon.facebook{
+    color:var(--color-facebook)
+}
+section.social .social_right > li .social-icon.linkedin{
+    color:var(--color-linkedin)
+}
+section.social .social_right > li .social-icon.youtube{
+    color:var(--color-youtube)
+}
+section.social .social_right > li{
+    width:4rem;
+    height:4rem;
+    background-color: #fff;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+section.social .social_left > li span,
+section.social .social_left > li a{
+    font-size:1.5rem;
+    margin-left:1rem;
+    color:#fff;
+    cursor: pointer;
+}
+section.social .social_left > li{
+    color:#fff;
+    display:flex;
+    align-items: center;
+}
+section.social .social_left > li:not(:last-of-type){
+    margin-right:4rem;
+}
+section.social .social_right > li:not(:last-child){
+    margin-right:1rem;
+}
+@media screen and (max-width:590px){
+    section.social .social_left{
+        flex-direction: column;
+    }
+    section.social .social_left > li:not(:last-of-type){
+        margin-right:0rem;
+        margin-bottom:.5rem;
+    }
+    section.social, section.social .social_right > li{
+        display: none;
+    }
+}

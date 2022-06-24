@@ -1,0 +1,614 @@
+*,*::after,*::before{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+html{
+    font-size:62.5%;
+}
+.hide_in_laptop_view {
+    display: none;
+}
+
+:root{
+    /* --primary-color:#07501e; */
+    --primary-color:#005d4b;
+    --color-blood:#8A0707;
+    --color-btn:#007cba;
+    --color-blue:#004a77;
+    --color-facebook:#3b5998;
+    --color-twitter:#55acee;
+    --color-instagram:#3f729b;
+    --color-youtube:#cd201f;
+    --color-linkedin:#0077b5;
+    --color-telegram:#00405d;
+    --color-green:#249150;
+    --color-lightBlue:#3396ff;
+    --color-red:#E81010;
+}
+a{
+    text-decoration: none;
+}
+ul,
+ol{
+    list-style-type: none;
+}
+header.header{
+    /* background:rgb(41 145 48); */
+    background:var(--primary-color);
+    width:100%;
+    /* padding-top:50px; */
+    padding-bottom:5rem;
+    padding-right:5rem;
+    padding-left:7rem;
+    clip-path:polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    position:relative;
+}
+header.header nav{
+    display:flex;
+    justify-content: space-between;
+    margin-left:2rem;
+    align-items: center;
+}
+
+header.header nav ul.navigation{
+    display:flex;
+    list-style-type: none;
+    
+}
+header.header nav ul.navigation li a{
+    text-decoration: none;
+    font-weight: 900;
+    color:#fff;
+    font-size: 1.5rem;
+    line-height: 3.3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-transform: capitalize;
+    font-family: "Poppins";
+    cursor: pointer;
+}
+header.header nav ul.navigation li{
+    position:relative;
+}
+header.header nav ul.navigation li ol.dropdown{
+    width:19rem; 
+    padding:1.5rem;
+    list-style-type: none;
+    background:#fff;
+    display: flex;
+    flex-direction: column;  
+    position:absolute; 
+    border-radius:1rem;
+    transform:translateY(4rem);
+    transition: all .5s;
+    opacity:0;
+    z-index:10;
+}
+header.header nav ul.navigation li:hover  ol.dropdown{
+    transform:translateY(0rem);
+    opacity:1;
+}
+header.header nav ul.navigation li ol.dropdown li{
+    font-size:1.5rem;
+    font-weight: 600;
+    padding:1rem 1.3rem;
+}
+header.header nav .contact_us button.btn{
+    outline:none;
+    border:none;
+    padding: 1.8rem 5.5rem ;
+    border-radius: 5rem;
+    letter-spacing: 0.05rem;
+    color: #252525;
+    background: #fff;
+    font-size:1.8rem;
+    font-weight: bold;
+    cursor:pointer;
+    z-index:20;
+    position: relative;
+
+}
+header.header  .header_left{
+    max-width:50rem;
+    width:100%;
+    margin-top: 9rem;
+}
+header.header  .header_right{
+    max-width:50rem;
+    position: absolute;
+    bottom:2rem;
+    right:5rem;
+    top: 20rem;
+
+}
+header.header  .header_right img{
+    width:100%;
+}
+
+header.header  .header_left h1{
+    font-size: 3.7rem;
+    color: #ffffff;
+    line-height: 5.6rem;
+    text-align: left;
+    margin-bottom: 4rem;
+}
+header.header  .header_left p{
+    color:#fff;
+    font-size: 2rem;
+    text-align: left;
+    margin-bottom:3rem;
+}
+header.header  .header_left p span.green{
+    /* color:var(--color-green); */
+    color: white;
+}
+header.header  .header_left p span.red{
+    color:var(--color-red);
+}
+header.header  .header_left p span.blue{
+    color:var(--color-lightBlue);
+}
+button.btn,
+button.btn.btn_member{
+    outline:none;
+    border:none;
+    padding: 1.8rem 5.5rem ;
+    border-radius: 5rem;
+    letter-spacing: 0.05rem;
+    font-size:1.8rem;
+    font-weight: 700;
+    background:var(--color-btn);
+    position:relative;
+    overflow: hidden;
+    cursor:pointer;
+    z-index:20;
+    position: relative;
+}
+
+button.btn.btn_member span{
+    color: #252525;
+    z-index: 999;
+    position: relative;
+}
+
+button.btn.btn_member:hover span{
+     color: #fff;
+
+}
+button.btn.btn_member::after{
+    width:100%;
+    height:100%;
+    content:"";
+    background-color: #fff;
+    top:0;
+    right:0;
+    bottom:0;
+    border-radius: 5rem;
+    position: absolute;
+    transition:width .3s;
+}
+button.btn.btn_member:hover::after{
+    width:0;
+}
+/* ---------------ABOUT PAHPO --------------- */
+
+section.about{
+    margin-top:-8rem;
+    width:100%;
+    /* min-height:120vh; */
+    padding:0 2rem;
+    padding-top:6rem;
+    padding-bottom:6rem;
+    display:flex;
+    align-items: center;
+    position:relative;
+}
+section.about .about_left,
+section.about .about_right{
+    flex:1;
+}
+section.about .about_left{
+    width:100%;
+    height:60%;
+    margin-right:4rem;
+    padding:6rem;
+}
+section.about .about_left img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+section.about .about_right h1{
+    max-width:45rem;
+    width:100%;
+    font-size: 3.5rem;
+    margin-bottom:2rem;
+    text-align: left;
+    color:var(--color-green);
+
+}
+
+span.green{
+    color:var(--color-green)
+}
+span.red{
+    color:var(--color-red)
+}
+span.blue{
+    color:var(--color-lightBlue)
+}
+span.bgred{
+    background-color: var(--color-red);
+    display:inline-block;
+    color:#fff;
+}
+section.about .about_right p{
+    font-size: 1.8rem;
+    text-align: left;
+    max-width:45rem;
+    width:100%;
+    margin-bottom:2rem;
+}
+
+
+/* -----------------END PAHPO---------------- */
+/* --------------BENEFITS SECTION------------ */
+section.benefits{
+    display:flex;
+    padding:0 5rem;
+    padding-bottom:6rem;
+}
+section.benefits .benefits_left{
+flex:0 1 55%;
+}
+section.benefits .benefits_left h1{
+    font-size:3rem;
+    margin-bottom:2rem;
+}
+
+section.benefits .benefits_left ul{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    column-gap:4rem;
+    row-gap: 7rem;
+    list-style-type: none;
+}
+
+
+section.benefits .benefits_left ul li .image_benefits{
+    width:10rem;
+    height:10rem;
+    margin: 0 auto;
+    margin-bottom:1rem;
+   
+}
+section.benefits .benefits_left ul li .image_benefits img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+section.benefits .benefits_left ul li h1{
+    text-align: center;
+    font-size:2.8rem;
+    margin-bottom:1rem; 
+}
+section.benefits .benefits_left ul li p{
+    font-size:1.8rem;
+    /* font-weight:bold; */
+    color:grey;
+}
+
+section.benefits .benefits_right{
+    flex:0 1 45%;
+}
+section.benefits .benefits_right{
+    width:100%; 
+}
+section.benefits .benefits_right img{
+    width:100%;
+}
+/* --------------END OF BENEFITS SECTION------------ */
+/* -----------BEGINNING SERVICES SECTION -------*/
+section.services{
+    width:100%;
+    background: linear-gradient(to right, rgba(185, 173, 173,.1), rgba(128, 128, 128,.4)), url(../../assets/bg_service.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding:15rem 2rem;
+
+}
+section.services h1,
+section.services p{
+    text-align: center;
+    font-size: 2rem;
+    color:#fff;
+}
+section.services h1{
+    font-size: 3.5rem;
+    margin-bottom:1rem;
+}
+section.services ul{
+   display:grid;
+   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+   max-width:110rem;
+   width:100%;
+   margin:0 auto;
+   margin-top:4rem;
+   gap:2rem;
+}
+section.services ul li{
+background-color: #fff;
+padding:30px;
+border-radius: 1rem;
+display:flex;
+flex-direction: column;
+align-items: center;
+}
+section.services ul li .image_wrap{
+    width:10rem;
+    height:10rem;
+}
+section.services ul li .image_wrap img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+section.services ul li h2{
+    text-align: center;
+    margin:1.5rem 0;
+    font-size: 24px;
+}
+section.services ul li p{
+    color:#252525;
+    font-size:1.8rem
+}
+section.services .button_wrapper{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:2rem;
+    font-size:1.4rem;
+}
+section.services a.view{
+    padding:1rem 2rem;
+    border-radius:1rem;
+    border:none;
+    outline: none;
+    background: #007cba;
+    color:#fff;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+
+/* -----------END SERVICES SECTION -------*/
+
+/* -------------BEGINNING OF SUSCRIBE----------- */
+section.subscribe{
+    background-color: #007cba;
+    width:100%;
+    padding:15rem 0;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+section.subscribe h1,
+section.subscribe p{
+    color:#fff;
+}
+section.subscribe h1{
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom:1rem;
+}
+section.subscribe p{
+    max-width:45rem;
+    width:100%;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+
+}
+section.subscribe .subscribe_box{
+    width:55rem;
+    display:flex;
+    background-color: #fff;
+    border-radius: 3rem;
+    overflow:hidden;
+    padding:.5rem;
+    margin-top:2rem;
+}
+section.subscribe .subscribe_box input{
+    flex:1;
+    border:none;
+    outline:none;
+    padding:0 1rem;
+}
+button.btn.white{
+    color: #fff;
+}
+/* -------------BEGINNING OF SUSCRIBE----------- */
+
+
+
+/* -----------Media query------------- */
+@media screen and (max-width:1134px){
+   
+    header.header{
+        padding-right:2rem;
+        padding-left:4rem;  
+    }
+    header.header nav{
+        margin-left:0px;
+    }
+}
+@media screen and (max-width:1058px){
+    header.header  .header_left{
+        max-width:45rem;
+    }
+}
+@media screen and (max-width:1022px){
+    section.benefits{
+        padding-bottom:6rem;
+        flex-direction: column-reverse;
+    }
+    section.benefits .benefits_left,
+    section.benefits .benefits_right{
+    flex:1
+    }
+    section.benefits .benefits_right{
+        max-width:50rem;
+        width:100%;
+        margin:0 auto;
+        margin-bottom:3rem;
+    }
+    section.benefits .benefits_left h1.centered{
+        font-size:3rem;
+        margin-bottom:3rem;
+        text-align: center;
+    }
+}
+@media screen and (max-width:994px){
+    header.header  .header_left{
+        position:relative;
+        z-index:20;
+    }
+    header.header nav ul.navigation{
+        display:none;
+    }
+    
+
+}
+@media screen and (max-width:982px){
+    header.header::after{  
+        content:"";
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background: linear-gradient(to right, rgba(0,0,0,.2), rgba(0,0,0,.4));
+    }
+    header.header nav{
+    position:relative;
+    z-index:10;
+    }
+      .header_right{
+        display: none;
+    }
+
+
+
+}
+
+@media screen and (max-width:846px){
+    section.about{
+        padding-top:14rem;
+        padding-bottom:6rem;
+        display:flex;
+        align-items: center;
+        position:relative;
+    }
+    section.about .about_left{
+        margin-right:2rem;
+        padding:0px;
+    }
+   
+}
+
+@media screen and (max-width:706px){
+
+    section.about .about_right{
+        flex:1;
+        max-width:60rem;
+        width:100%;
+        margin:0 auto;
+    }
+    section.about {
+        flex-direction: column-reverse;
+    }
+    
+    div.hide_in_laptop_view, .hide_in_laptop_view {
+        display: block;
+    }
+    .hide_in_mobile_view{
+        display:none;
+      
+    }
+    section.about .about_right h1{
+        max-width:50rem;
+    
+    }
+    section.about .about_right p{
+        max-width:55rem;
+    }
+}
+@media screen and (max-width:628px){
+    section.subscribe{
+        padding:10rem 4rem;
+    }
+    section.subscribe h1{
+        font-size: 3rem;
+        font-weight: 600;
+        max-width:50rem;
+        width:100%;
+        margin:0 auto;
+        margin-bottom:1rem;
+        text-align: center;
+    }
+    section.subscribe p{
+        max-width:55rem;
+        width:100%;
+        margin:0 auto;
+        font-size: 1.8rem;
+        font-weight: 300;
+    
+    }
+    section.subscribe .subscribe_box{
+        width:100%;
+        padding:.5rem;
+        margin-top:2rem;
+    }
+    button.btn{
+        padding: 1rem 2.5rem ;
+        border-radius: 5rem;
+        letter-spacing: 0.05rem;
+        font-size:1.8rem;
+        font-weight: 700;
+        /* background:gold; */
+        background:var(--color-btn);
+    }
+}
+@media screen and (max-width:508px){
+header.header{
+    padding-bottom:5rem;
+    clip-path:polygon(0 0, 100% 0, 100% 95%, 0 100%);
+}
+header.header  .header_right{
+    bottom:-1rem;
+}
+}
+
+@media screen and (max-width:362px){
+    html{
+        font-size: 50%;
+    }
+    section.benefits .benefits_left h1.centered{
+        padding:0 3.5rem;
+    }
+    section.benefits{
+        padding:0 2rem;
+    }
+}
+button.btn.btn_member.override_color::after{
+    background-color: #3396ff !important;
+}
+button.btn.btn_member.override_color span {
+    color: white !important;
+
+}

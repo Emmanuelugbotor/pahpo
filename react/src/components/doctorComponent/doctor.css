@@ -1,0 +1,170 @@
+section.doctors{
+    padding:5rem;
+    background-color: #fff;
+    /* display:flex; */
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+    
+}
+section.doctors::-webkit-scrollbar{
+    display:none;
+}
+.docs {
+    text-align: center;
+    margin: 0 auto;
+}
+.docs h1{
+    font-size:3rem;
+    position: relative;
+    background:linear-gradient(to right, red, green);
+    background-clip: text;
+    line-height: 3rem;
+    padding:10px;
+    color:transparent;
+    transition:all .5s;
+    transform: rotate(0deg)
+}
+/* swiper-slide swiper-slide-duplicate swiper-slide-active */
+.swiper-container-css-mode>.swiper-wrapper>.swiper-slide {
+    width: 500px !important;
+}
+.docs h1:hover{
+    transform: rotate(5deg) translateZ(100px);
+}
+.docs h1::after{
+        content: "";
+        width: 50%;
+        height: 100%;
+        /* background: #b1abab; */
+        position: absolute;
+        /* background: #020261 0% 0% no-repeat padding-box; */
+        opacity: 0.2;
+        left: 0;
+        top: 0;
+}
+
+.docs p.main_text{
+    font-size: 2rem;
+    max-width:800px;
+    width:100%;
+    text-align: center;
+    margin-bottom:60px;
+    margin: 0 auto;
+}
+section.doctors ul.doctors_wrapper{
+    display:flex;
+    /* max-width: 120rem;
+    width:100%; */
+    margin:0 auto;
+    /* grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr)); */
+    gap:4rem;
+    padding:2rem;
+}
+section.doctors ul.doctors_wrapper li{
+    /* width:350px; */
+    border:1px solid #fff;
+    box-shadow: 0 20px 10px rgba(0,0,0,.08);
+    /* border-radius: 1rem; */
+    overflow: hidden;
+}
+
+section.doctors ul.doctors_wrapper li .image_container{
+width:100%;
+height:400px;
+overflow: hidden;
+position: relative;
+}
+
+section.doctors ul.doctors_wrapper li .image_container .doctors_details{
+position:absolute;
+bottom:0;
+left:0;
+right:0;
+width:100%;
+background:rgba(0,0,0,.4);
+display:flex;
+flex-direction: column;
+align-items: flex-end;
+padding:1rem;
+backdrop-filter: blur(.5rem);
+transform: translateY(10rem);
+transition: all .5s;
+opacity: 0;
+}
+section.doctors ul.doctors_wrapper li:hover .image_container .doctors_details{
+    opacity:1;
+    transform: translateY(0);
+}
+section.doctors ul.doctors_wrapper li .image_container .doctors_details > p{
+    margin-bottom:.5rem;
+    font-size:1.8rem;
+    color:#fff;
+    transform:translateX(20rem);
+    transition:transform .5s;
+   
+}
+section.doctors ul.doctors_wrapper li .image_container .doctors_details > p:first-child{
+    transition-delay: .5s;
+    color:var(--color-green);
+    font-weight: 900;
+}
+section.doctors ul.doctors_wrapper li .image_container .doctors_details > p:nth-child(2){
+    transition-delay: 1s;
+    color:var(--color-red);
+}
+section.doctors ul.doctors_wrapper li:hover .image_container .doctors_details > p{
+    transform:translateX(0rem)
+}
+section.doctors ul.doctors_wrapper li .image_container .doctors_details span{
+    color:#fff;
+    font-style: italic;
+    font-size: 1.6rem;
+    display:inline-block;
+    transform:translateX(20rem);
+    transition:transform .5s;
+    transition-delay: 1.5s;
+}
+section.doctors ul.doctors_wrapper li:hover .image_container .doctors_details span{
+    transform:translateX(0rem)
+}
+section.doctors ul.doctors_wrapper li .image_container img{
+    width:100%;
+    height:100%;
+    object-fit: contain;
+    transition: all 5s;
+}
+section.doctors ul.doctors_wrapper li:hover .image_container img{
+    transform: scale(1.5);
+    transition-delay: .5s;
+}
+@media screen and (max-width:486px) {
+
+    section.doctors ul.doctors_wrapper{
+        display:flex;
+        /* flex-direction: column;
+        width:100%; */
+    }
+
+    section.doctors{
+        overflow: scroll;
+        padding:5rem 2rem;
+    }
+    section.doctors ul.doctors_wrapper li .image_container img {
+        object-fit: cover;
+    }
+    section.doctors ul.doctors_wrapper li {
+        width: 300px;
+    }
+}
+@media screen and (max-width:706px){
+    .swiper-container-css-mode>.swiper-wrapper>.swiper-slide {
+    width: 100% !important;
+}
+section.doctors ul.doctors_wrapper li .image_container{
+width:auto;
+height:400px;
+overflow: visible;
+position: relative;
+}
+}

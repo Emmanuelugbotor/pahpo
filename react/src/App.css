@@ -1,0 +1,232 @@
+#react-select-3-listbox, .css-26l3qy-menu {
+    font-size: 20px !important;
+}
+*{
+    /* font-family: "abril fatface"; */
+    font-family: "Poppins";
+    
+}
+p, h1, h2, h3, h4, h5, h6 {
+    font-family: "poppins";
+
+}
+/* .navImage {
+    background-image: url(images/bg_slider.jpg);
+} */
+.section-meal{
+    padding: 0px;
+    margin: 0px;
+    margin-left: 0px !important;
+}
+.meals-showcase{
+    width: 100%;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.meals-showcase li{
+    float: left;
+    display:block;
+   width: 25%;
+   background-color: #000;
+}
+.photo-meal{
+    background: linear-gradient(rgba(255, 255, 255, 0), #000);
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+}
+.photo-meal img{
+    height: auto;
+    /* max-height: 200px; */
+    /* height: 250px; */
+    width: 100%;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.photo-meal img:hover{
+    transform: scale(1.3);
+    opacity: 0.3;
+}
+
+.clearfix{
+    zoom: 1;
+}
+.clearfix:after{
+    content: '.';
+    clear:both;
+    display:block;
+    height:0;
+    visibility:hidden;
+}  
+.whatsapp, .twitter-icon-html,  .ig-icon-html {
+    display: none;
+}
+@media screen and (max-width:590px){
+
+    .whatsapp, .twitter-icon-html,  .ig-icon-html {
+        display: block;
+    }
+
+.whatsapp{
+    position: fixed;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    bottom: 250px;
+    right: 20px;
+    /* background-color: #25d366; */
+    font-size: larger;
+    text-align: center;
+    /* box-shadow: 15px 35px 15px black; */
+    border-radius: 50px;
+    border-color: #25d366;
+    overflow: hidden;
+  }
+  .s-icon a{
+      width:100%;
+      height:100%;
+  }
+  .s-icon a img{
+      width:100%;
+      height:100%;
+      object-fit: cover;
+  }
+
+.twitter-icon-html{
+    position: fixed;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    bottom: 300px;
+    right: 20px;
+    /* background-color: #25d366; */
+    font-size: larger;
+    text-align: center;
+    /* box-shadow: 15px 35px 15px black; */
+    border-radius: 50px;
+    border-color: #25d366;
+    display: flex;
+    align-items: center;
+    justify-content:center
+  }
+  .twitter-icon-html .size,
+  .ig-icon-html .size{
+      font-size: 3rem;
+  }
+.ig-icon-html{
+    position: fixed;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    bottom: 350px;
+    right: 20px;
+    /* background-color: #25d366; */
+    font-size: larger;
+    text-align: center;
+    /* box-shadow: 15px 35px 15px black; */
+    border-radius: 50px;
+    border-color: #25d366;
+    display: flex;
+    align-items: center;
+    justify-content:center
+  }
+
+  .whatsappShadow{
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    /* background-color: #25d366; */
+    font-size: larger;
+    text-align: center;
+    border-radius: 50px;
+    z-index: 1000;
+  }
+
+ } 
+  
+  .hiders{
+    margin-top: "150px";
+
+}
+
+.service-card{
+    overflow: hidden;
+    padding-bottom: 20px !important;
+    margin-bottom: 20px;
+    padding: 15px 30px;
+    background: #fff;
+    box-shadow: 0px 0px 50px rgba(85, 83, 83, 0.6);
+    border-radius: 14px;
+    
+}
+.imgBottom{
+    margin-bottom: '30px';
+}
+
+.regDiv{
+    border-color: #006BA6;
+    border-top: 3px solid #EEF0F3;
+    border-radius: 20px 20px 0px 0px;
+    -webkit-transition: border-color 0.3s;
+    transition: border-color 0.3s;
+    /* margin: 1em 22.5px; */
+    padding: 2em 2.5em;
+    text-align: center;
+    color: #262b38;
+    box-shadow: 0px 0px 25px rgb(0 0 0 / 10%);
+    font-size: 18px;
+}
+
+.form-control{
+    background-color: #fff;
+    background-image: none;
+    border: 2px solid rgba(204, 204, 204, 0.5);
+    box-shadow: 0 1px 1px rgb(0 0 0 / 8%) inset;
+    color: #555;
+    display: block;
+    font-size: 14px;
+    height: 50px;
+    line-height: 1.42857;
+    border-color: #4DB0E1;
+    /* padding: 6px 40px; */
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    width: 100%;
+}
+
+label {
+    font-size: 16px;
+}
+#conutries{
+    background-color: #fff;
+    background-image: none;
+    border: 2px solid rgba(204, 204, 204, 0.5);
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 8%) inset;
+    color: #555;
+    display: block;
+    font-size: 14px;
+    height: 50px;
+    line-height: 1.42857;
+    border-color: #4DB0E1;
+    /* padding: 6px 40px; */
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    width: 100%;
+}
+
+@media only screen and (max-width: 600px) and (min-width: 300px) {
+    
+    
+    
+    .hiders{
+        margin: "100px";
+    }
+}

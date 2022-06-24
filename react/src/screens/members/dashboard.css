@@ -1,0 +1,306 @@
+
+*,*::after,*::before{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+ul,ol{
+    list-style-type: none;
+}
+header.dashboard{
+    width:100%;
+   
+
+}
+header.dashboard .sticky_header{
+    height:60px;
+    position:sticky;
+    top:0;
+    left:0;
+    padding:0 90px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.2);
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    z-index: 50;
+}
+header.dashboard .sticky_header ul.left_section,
+header.dashboard .sticky_header ul.right_section{
+    display:flex;
+    align-items: center;
+    height:100%;
+}
+header.dashboard .sticky_header ul.left_section li.company_logo{
+    width:40px;
+    height:40px;   
+}
+header.dashboard .sticky_header ul.left_section li.vacancy{
+    align-self:stretch;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    transition: all .2s;
+    padding:10px;
+    
+}
+header.dashboard .sticky_header ul.left_section li.vacancy:hover{
+    background:rgba(110, 110, 233, 0.705);
+    color:#fff;
+    cursor: pointer;
+    
+}
+header.dashboard .sticky_header ul.left_section li{
+    margin-left:10px;
+}
+header.dashboard .sticky_header ul.left_section li.company_logo img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+header.dashboard .sticky_header ul.right_section li:not(li.english){
+    padding:0 10px;
+    transition:all .2s;
+    align-self: stretch;
+    display:flex;
+    align-items: center;
+}
+header.dashboard .sticky_header ul.right_section li:hover:not(li.english){
+    background:rgba(110, 110, 233, 0.705);  
+    cursor:pointer
+}
+header.dashboard .sticky_header ul.right_section li.english{
+    margin-right:40px;
+}
+header.dashboard .sticky_header ul.right_section li.english:hover{
+    color:rgba(110, 110, 233, 0.705);
+    cursor: pointer;
+}
+/* --------------------------- */
+header.dashboard .dashboard_user_details{
+    max-width:1000px;
+    width:100%;
+    min-height:70vh;
+    background: #888bdd;
+    margin:0 auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:40px 20px;
+}
+header.dashboard .dashboard_user_details .dashboard_user_details_image{
+    width:120px;
+    height:120px;
+    border:2px solid #fff;
+    border-radius:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom:10px;
+    background-color: rgb(202, 176, 176);
+}
+header.dashboard .dashboard_user_details .dashboard_user_details_image i{
+    font-size: 60px;
+    color:green
+}
+header.dashboard .dashboard_user_details h1{
+    color:#fff;
+    margin-bottom:40px;
+    font-size: 50px;
+}
+header.dashboard .dashboard_user_details h3{
+    color:#fff;
+}
+header.dashboard .dashboard_user_listing{
+    max-width:1000px;
+    width:100%;
+    margin:0 auto;
+    background-color: rgb(236, 231, 231);
+    display:flex;
+    justify-content: center;
+    padding:0 20px;
+}
+header.dashboard .dashboard_user_listing ul{
+    display: flex;
+}
+header.dashboard .dashboard_user_listing ul li{
+    /* margin-right:20px; */
+    padding:15px 20px;
+    transition:all .3s;
+}
+header.dashboard .dashboard_user_listing ul li.active{
+    position:relative;
+}
+header.dashboard .dashboard_user_listing ul li.active::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    height:2px;
+    background:#000;
+}
+header.dashboard .dashboard_user_listing ul li:hover:not(li.active){
+ background:grey;
+ cursor: pointer;
+}
+.main_wrapper{
+    max-width:1000px;
+    width:100%;
+    margin:0 auto;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+main{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+main .main_top{
+    max-width:700px;
+    width:100%;
+    border-radius:10px;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px 2px rgba(0,0,0,.2);
+    padding:30px;
+}
+main .main_top h2{
+    color:grey;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    margin: 1rem 0rem 1.5rem;
+    font-size: 1.25rem;
+}
+main .main_top ul > li {
+    display:flex;
+    margin-bottom:20px;
+}
+main .main_top ul li p{
+    flex-basis: 40%;
+    color:grey;
+}
+main .main_top ul li span{
+    flex-basis: 60%;
+    color:rgb(211, 206, 206);
+    font-size:14px;
+    font-weight: 100;
+}
+main .main_top ul ol{
+    display:flex;
+    flex-wrap:wrap;
+}
+main .main_top ul ol li{
+    margin-right:10px;
+    background:rgb(212, 201, 201);
+    padding:5px 10px;
+    margin-bottom:10px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+main .main_bottom {
+    max-width:700px;
+    width:100%; 
+    border-radius:10px;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px 2px rgba(0,0,0,.2);
+    padding:30px;
+    padding-bottom:50px;
+    margin-top: 20px;
+    display:flex;
+    justify-content: space-between;
+
+}
+main .main_bottom h3 {
+    margin-top: 10px;
+    color: rgb(156, 154, 154);
+}
+
+main .main_bottom p {
+   margin-top:50px;
+   background-color: #41d79f;
+   align-self: flex-start;
+   color:#fff;
+   padding:10px;
+   font-size: 14px;
+   border-radius:5px;
+   cursor: pointer;
+   transition:all .3s;
+}
+main .main_bottom p:hover{
+    background-color: rgb(141, 27, 27);
+}
+
+@media screen and (max-width:1043px){
+    .main_wrapper{
+        max-width:100%;
+        width:100%;
+        margin:0;
+        padding:0 20px;
+
+    }
+    header.dashboard .sticky_header ul.left_section li.company_logo {
+        padding-top: 10px;
+        /* width: 60px; */
+        height: 50px;
+    }
+    header.dashboard .sticky_header ul.left_section li {
+        margin-left: 0px;
+    }
+    ul {
+        padding-left: 0px;
+    }
+    .vacancy{
+        display: none !important;
+    }
+    header.dashboard .dashboard_user_details{
+        min-height: 30vh;
+    }
+}
+@media screen and (max-width:878px){
+    header.dashboard .sticky_header{
+        padding:0 10px;
+ 
+    }
+    main .main_top{
+        max-width:100%;
+        width:100%;
+    }
+    main .main_bottom{
+        max-width:100%;
+        width:100%;
+    }
+}
+@media screen and (max-width:587px){
+    main .main_top ul > li {
+        flex-direction: column;
+    }
+    main .main_top ul li p{
+        flex-basis: 100%;
+    }
+    main .main_top ul li span{
+        flex-basis: 100%;
+    }
+    header.dashboard .dashboard_user_listing ul{
+        width:100%;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        flex-wrap: nowrap;
+    }
+    header.dashboard .dashboard_user_listing ul::-webkit-scrollbar{
+        display:none;
+    }
+    header.dashboard .dashboard_user_details h1{
+        font-size: 40px;
+        text-align: center;
+        margin-bottom:10px;
+    }
+    header.dashboard .dashboard_user_details h3{
+        font-size:15px;
+    }
+}
