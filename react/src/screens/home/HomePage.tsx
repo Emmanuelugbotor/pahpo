@@ -20,24 +20,33 @@ import 'swiper/swiper-bundle.min.css';
 import 'swiper/swiper.min.css';
 import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper'
 import { Alert } from "react-bootstrap";
+import sliderData from "./slider"
+import CloseIcon from "@mui/icons-material/Close";
+import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 
 SwiperCore.use([Navigation, Pagination, Autoplay])
 
 
 const HomePage = () => {
-
-const [showAlert, setShowAlert] = useState(true);
-
-
- 
+  const [showAlert, setShowAlert] = useState(true);
 
 
-  useEffect(()=>{
-    setTimeout(()=>{
+
+
+  useEffect(() => {
+    setTimeout(() => {
       window.alert(`Note: This website is under constant update and maintenance. We will update you when all functionality is fully operational. Thanks for your cooperation.`);
     }, 10000)
   }, []);
 
+  // handle the videos
+  const [video, setVideo] = useState(0);
+  function handleVideo(id: number) {
+    setVideo(id);
+  }
+  function handleClose() {
+    setVideo(0);
+  }
   return (
     <>
       <SocialHeader />
@@ -86,25 +95,52 @@ const [showAlert, setShowAlert] = useState(true);
             // modules={[Navigation, Pagination]}
             className="mySwiper"
           >
-            <SwiperSlide>
-              {/* <img src="/images/slide1.jpeg" alt="PAHPO Image" /> */}
+            {/* <SwiperSlide>
               <VideoComp />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="/images/slide2.jpeg" alt="PAHPO Image" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="/images/slide3.jpeg" alt="PAHPO Image" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="/images/slide4.jpeg" alt="PAHPO Image" />
-            </SwiperSlide>
+            </SwiperSlide> */}
+            {
+              sliderData.map((item) => {
+                return <SwiperSlide key={item.id} >
+                  {
+                    item.iframe ?
+                      <div className="image_play" onClick={() => handleVideo(item.id)}>
+                        <img src={item.image} alt="PAHPO_Image" />
+                        <PlayCircleOutlineIcon className="play" />
+                      </div>
+
+                      : <img src={item.image} alt="PAHPO_Image" />
+
+                  }
+                </SwiperSlide>
+              })
+            }
+
+
+
           </Swiper>
         </div>
       </header>
+      {video && (
+        <div className={video ? "trailer watch" : "trailer"}>
+          <iframe
+            allow="accelerometer; autoplay; clipboard-write;encrypted-media; gyroscope; picture-in-picture"
+            frameBorder="0"
+            height="315"
+            sandbox="allow-popups allow-same-origin allow-scripts allow-presentation"
+            src={sliderData[video - 1].iframe}
+            title="Meet OpenSea"
+            width="560"
+
+          ></iframe>
+          <CloseIcon className="close__video" onClick={handleClose} />
+
+
+
+        </div>
+      )}
 
       <section className="about">
-        
+
         <div className="hide_in_laptop_view about_left">
           <Swiper
             slidesPerView={1}
@@ -133,6 +169,8 @@ const [showAlert, setShowAlert] = useState(true);
             <SwiperSlide>
               <img src="/images/slide4.jpeg" alt="PAHPO Images" />
             </SwiperSlide>
+
+
           </Swiper>
           <Link
             style={{ textDecoration: "none" }}
